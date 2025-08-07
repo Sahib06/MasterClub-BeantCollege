@@ -3,9 +3,4 @@ services:
     name: masterclub-beantcollege
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn college_attendance.main:app --host 0.0.0.0 --port $PORT
-    envVars:
-      - key: DATABASE_URL
-        value: sqlite:///./college_attendance.db
-      - key: PORT
-        value: 8000 
+    startCommand: uvicorn college_attendance.main:app --host 0.0.0.0 --port $PORT 
