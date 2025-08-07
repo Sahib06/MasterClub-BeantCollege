@@ -1,1 +1,1 @@
-web: uvicorn college_attendance.main:app --host 0.0.0.0 --port $PORT 
+web: uvicorn college_attendance.main:app --host 0.0.0.0 --port $PORT --workers 1 
