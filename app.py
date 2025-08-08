@@ -130,7 +130,9 @@ async def health_check():
 
 @app.get("/ui")
 async def serve_frontend():
-    if os.path.exists("static/index.html"):
+    if os.path.exists("index.html"):
+        return FileResponse("index.html")
+    elif os.path.exists("static/index.html"):
         return FileResponse("static/index.html")
     else:
         return {"message": "Frontend not found"}
